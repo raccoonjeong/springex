@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@Qualifier("event")
+@Primary
 public class EventServiceDAOImpl implements SampleDAO{
 }

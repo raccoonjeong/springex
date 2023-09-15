@@ -8,9 +8,8 @@ import org.springframework.stereotype.Service;
 
 @ToString
 @Service
-@RequiredArgsConstructor
 public class SampleService {
 
-    @Qualifier("normal")
-    private final SampleDAO sampleDAO;
+    @Autowired
+    private SampleDAO sampleDAO;
 }
