@@ -29,6 +29,11 @@
           destroy-method="close">
         <constructor-arg ref="hikariConfig"/>
     </bean>
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="mapperLocations" value="classpath:/mappers/**/*.xml"></property>
+    </bean>
 
+    <mybatis:scan base-package="org.raccoon.springex.mapper"></mybatis:scan>
 
 </beans>
